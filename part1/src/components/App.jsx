@@ -2,7 +2,6 @@ import React from "react";
 import Header from './header.jsx'
 import Content from './content.jsx'
 import Total from './total.jsx'
-// import Footer from './footer.jsx'
 
 const App = () => {
   const course = "Half Stack Application Development";
@@ -29,7 +28,6 @@ const App = () => {
         exercises2={exercises2}
         exercises3={exercises3}
       />
-      {/* <Footer /> */}
     </div>
   );
 };
