@@ -28,10 +28,19 @@ footer {
   text-align: center;
   padding-top: 10px;
 }
-/* #page-container {
-  position: relative;
-  min-height: 100vh;
-} */
-#spanFoot {
-  /* margin-left: 40%; */
+button {
+  margin: 0 auto;
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  padding: 5px;
+  margin: 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: black;
+  color: cyan
+}
+button:active:hover {
+  color: black;
+  background-color: cyan;
 }
