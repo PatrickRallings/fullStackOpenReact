@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Button({typeClick1}) {
+export default function Button({typeClick, text}) {
   return (
     <div>
-    <button onClick={typeClick1} >Good</button>
+    <button onClick={typeClick} >{text}</button>
     </div>
   )
 }
