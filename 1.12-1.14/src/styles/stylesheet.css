@@ -43,6 +43,10 @@ button {
   color: cyan
 }
 
+button:hover {
+  cursor:pointer;
+}
+
 button:active:hover {
   color: black;
   background-color: cyan;
