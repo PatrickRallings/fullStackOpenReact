@@ -1,43 +1,49 @@
-import React, { useState } from 'react'
-import Button from './Button.js'
+import React, { useState } from "react";
+import Button from "./Button.js";
+import Header from "./Header.js";
+import Votes from "./Votes.js"
 
 const App = () => {
   const anecdotes = [
-    'If it hurts, do it more often',
-    'Adding manpower to a late software project makes it later!',
-    'The first 90 percent of the code accounts for the first 10 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.',
-    'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
-    'Premature optimization is the root of all evil.',
-    'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.',
-    'Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients'
-  ]
+    "If it hurts, do it more often",
+    "Adding manpower to a late software project makes it later!",
+    "The first 90 percent of the code accounts for the first 10 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
+    "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+    "Premature optimization is the root of all evil.",
+    "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
+    "Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients",
+  ];
 
-  const [selected, setSelected] = useState(0)
+  const [selected, setSelected] = useState(0);
 
-  const [votes, setVotes] = useState([0, 0, 0, 0, 0, 0, 0])
+  const [votes, setVotes] = useState([0, 0, 0, 0, 0, 0, 0]);
 
-  let data = votes
+  let data = votes;
 
   const next = () => {
-    setSelected((Math.round(Math.random()*10))%(anecdotes.length-1))
-    // console.log(selected)
-  }
+    setSelected(Math.round(Math.random() * 10) % (anecdotes.length - 1));
+  };
 
   const vote = () => {
-    console.log(selected)
-    // setVotes(votes[selected])
-    data[selected]++
-    console.log(data)
-    console.log(votes)
-  }
+    console.log(selected);
+    data[selected]++;
+    console.log(data);
+  };
 
   return (
-    <div>
-      <Button typeClick={next} text='New Anecdote' />
-      {anecdotes[selected]}
-      <Button typeClick={vote} text='Cast Vote' />
-    </div>
-  )
-}
+    <div className="pt-2">
+      <Header />
+      <div className='row align-center pt-3'>
+        <div className="col-6 pl-5"><h4>{anecdotes[selected]}</h4></div>
+        <div className="col-6">
+          <Votes value={data[selected]} />
+          <Button typeClick={vote} text="Cast Vote" />
+        </div>
+      </div>
 
-export default App
+      <Button typeClick={next} text="New Anecdote" />
+    </div>
+  );
+};
+
+export default App;
