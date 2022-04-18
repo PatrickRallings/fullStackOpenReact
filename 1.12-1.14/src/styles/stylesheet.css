@@ -5,13 +5,27 @@ body {
   text-align: center;
 }
 
-header {
+.header {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
-  background-image: linear-gradient(315deg, #89d4cf 0%, #6e45e1 74%);
-  height: 100px;
-  border-bottom: 3px solid rgb(210, 172, 219);
+  padding-top: 15px;
+  background-image: linear-gradient(315deg, #89d4cf 0%, #5d4274 74%);
+  height: 75px;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+hr {
+  margin: 25px;
+  background-color: white;
+}
+
+.votes {
+  color:cadetblue;
+}
+
+.votesHR {
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 button {

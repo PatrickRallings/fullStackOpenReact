@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Button from "./Button.js";
 import Header from "./Header.js";
-import Votes from "./Votes.js"
+import Votes from "./Votes.js";
+import MostPopular from "./MostPopular.js";
 
 const App = () => {
   const anecdotes = [
@@ -16,19 +17,20 @@ const App = () => {
 
   const [selected, setSelected] = useState(0);
 
-  const [votes, setVotes] = useState([0, 0, 0, 0, 0, 0, 0]);
-
-  let data = votes;
+  const [votes, setVotes] = useState(new Array(anecdotes.length).fill(0));
 
   const next = () => {
     setSelected(Math.round(Math.random() * 10) % (anecdotes.length - 1));
   };
 
   const vote = () => {
-    console.log(selected);
-    data[selected]++;
-    console.log(data);
+    const copy = [...votes];
+    copy[selected]++;
+    setVotes(copy);
+    console.log()
   };
+
+  const voteImg = <img src="https://www.alachuadems.org/wp-content/uploads/2020/10/icon_checkmark-1.png" height='30px' title='Please vote for your favorite anecdote!' alt="vote checkmark"/>
 
   return (
     <div className="pt-2">
@@ -36,12 +38,13 @@ const App = () => {
       <div className='row align-center pt-3'>
         <div className="col-6 pl-5"><h4>{anecdotes[selected]}</h4></div>
         <div className="col-6">
-          <Votes value={data[selected]} />
-          <Button typeClick={vote} text="Cast Vote" />
+          <Votes value={votes[selected]} />
+          <Button typeClick={vote} text="Vote" voteImg={voteImg} />
         </div>
       </div>
-
       <Button typeClick={next} text="New Anecdote" />
+      <hr />
+      <MostPopular top={anecdotes[votes.indexOf(Math.max(...votes))]} value={Math.max(...votes)}/>
     </div>
   );
 };
