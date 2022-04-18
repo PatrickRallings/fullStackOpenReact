@@ -43,7 +43,7 @@ const App = () => {
         </div>
       </div>
       <Button typeClick={next} text="New Anecdote" />
-      <hr />
+      <hr className='mr-5 ml-5'/>
       <MostPopular top={anecdotes[votes.indexOf(Math.max(...votes))]} value={Math.max(...votes)}/>
     </div>
   );

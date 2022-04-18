@@ -15,12 +15,12 @@ body {
 }
 
 .vote {
-  color: black;
+  color: white;
   background-color: #293047;
+  border: 1px solid white;
 }
 
 hr {
-  margin: 25px;
   background-color: white;
 }
 
@@ -63,7 +63,7 @@ button:active:hover {
 }
 .vote:active:hover {
   background-color: black;
-  color: cyan
+  color: cyan;
 }
 
 .tg {
