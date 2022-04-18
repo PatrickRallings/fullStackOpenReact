@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Button({typeClick, text, voteImg}) {
+export default function Button({typeClick, text, voteImg, param}) {
   return (
     <>
-    <button onClick={typeClick}>{voteImg}  {text}</button>
+    <button className={param} onClick={typeClick}>{voteImg}  {text}</button>
     </>
   )
 }

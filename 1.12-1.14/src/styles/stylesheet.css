@@ -14,9 +14,21 @@ body {
   border-bottom: 3px solid rgb(255, 255, 255);
 }
 
+.vote {
+  color: black;
+  background-color: #293047;
+}
+
 hr {
   margin: 25px;
   background-color: white;
+}
+
+.row {
+  background-color: black;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 21px;
 }
 
 .votes {
@@ -48,6 +60,10 @@ button:hover {
 button:active:hover {
   color: black;
   background-color: cyan;
+}
+.vote:active:hover {
+  background-color: black;
+  color: cyan
 }
 
 .tg {

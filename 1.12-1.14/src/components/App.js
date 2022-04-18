@@ -36,10 +36,10 @@ const App = () => {
     <div className="pt-2">
       <Header />
       <div className='row align-center pt-3'>
-        <div className="col-6 pl-5"><h4>{anecdotes[selected]}</h4></div>
-        <div className="col-6">
+        <div className="col-8 pl-5 align-self-center"><h4>"{anecdotes[selected]}"</h4></div>
+        <div className="col-4">
           <Votes value={votes[selected]} />
-          <Button typeClick={vote} text="Vote" voteImg={voteImg} />
+          <Button param='vote' typeClick={vote} text="Vote" voteImg={voteImg} />
         </div>
       </div>
       <Button typeClick={next} text="New Anecdote" />

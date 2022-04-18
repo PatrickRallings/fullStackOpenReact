@@ -5,7 +5,6 @@ export default function Header() {
     <>
     <h1 className="header">Programming Anecdotes</h1>
     <p><i>Vote for your favorite</i></p>
-    <hr />
     </>
   )
 }

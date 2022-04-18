@@ -18,7 +18,7 @@ export default function MostPopular({top, value}) {
     <h2>Most Popular Anecdote</h2>
     <hr className='votesHR' />
         <div className='col mt-2'>
-        <h4>{top}</h4>
+        <h4>"{top}"</h4>
         </div>
         <div className='col mt-2 votes'>
             <h3><i>Votes: {value}</i></h3>
