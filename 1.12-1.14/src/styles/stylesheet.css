@@ -9,26 +9,30 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 15px;
-  background-image: linear-gradient(315deg, #89d4cf 0%, #5d4274 74%);
+  background-color: #2f4353;
+  background-image: linear-gradient(315deg, #2f4353 0%, #1a1714 74%);
   height: 75px;
-  border-bottom: 3px solid rgb(255, 255, 255);
+  border-bottom: 3px solid #13151d;;
 }
 
 .vote {
   color: white;
-  background-color: #293047;
-  border: 1px solid white;
+  background: #13151d;
+  border: 1px solid gray;
 }
 
 hr {
-  background-color: white;
+  background-color: #13151d;
+  height: 1px;
 }
 
 .row {
-  background-color: black;
+  background-color: #2f4353;
+  background-image: linear-gradient(315deg, #2f4353 0%, #1a1714 74%);
   margin-left: 50px;
   margin-right: 50px;
   border-radius: 21px;
+  border: 1px solid #13151d;
 }
 
 .votes {
@@ -49,8 +53,9 @@ button {
   margin: 25px;
   border: none;
   border-radius: 25px;
-  background-color: black;
-  color: cyan
+  background: #13151d;
+  color: aliceblue;
+  border: 1px solid gray;
 }
 
 button:hover {
@@ -61,10 +66,7 @@ button:active:hover {
   color: black;
   background-color: cyan;
 }
-.vote:active:hover {
-  background-color: black;
-  color: cyan;
-}
+
 
 .tg {
   margin: 0 auto;
