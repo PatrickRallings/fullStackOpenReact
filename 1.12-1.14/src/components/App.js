@@ -27,24 +27,36 @@ const App = () => {
     const copy = [...votes];
     copy[selected]++;
     setVotes(copy);
-    console.log()
+    console.log();
   };
 
-  const voteImg = <img src="https://www.alachuadems.org/wp-content/uploads/2020/10/icon_checkmark-1.png" height='30px' title='Please vote for your favorite anecdote!' alt="vote checkmark"/>
+  const voteImg = (
+    <img
+      src="https://www.alachuadems.org/wp-content/uploads/2020/10/icon_checkmark-1.png"
+      height="30px"
+      title="Please vote for your favorite anecdote!"
+      alt="vote checkmark"
+    />
+  );
 
   return (
     <div className="pt-2">
       <Header />
-      <div className='row align-center pt-3'>
-        <div className="col-8 pl-5 align-self-center"><h4>"{anecdotes[selected]}"</h4></div>
+      <div className="row align-center pt-3">
+        <div className="col-8 pl-5 align-self-center">
+          <h4>"{anecdotes[selected]}"</h4>
+        </div>
         <div className="col-4">
           <Votes value={votes[selected]} />
-          <Button param='vote' typeClick={vote} text="Vote" voteImg={voteImg} />
+          <Button param="vote" typeClick={vote} text="Vote" voteImg={voteImg} />
         </div>
       </div>
       <Button typeClick={next} text="New Anecdote" />
-      <hr className='mr-5 ml-5'/>
-      <MostPopular top={anecdotes[votes.indexOf(Math.max(...votes))]} value={Math.max(...votes)}/>
+      <hr className="mr-5 ml-5" />
+      <MostPopular
+        top={anecdotes[votes.indexOf(Math.max(...votes))]}
+        value={Math.max(...votes)}
+      />
     </div>
   );
 };
